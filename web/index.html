@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pass Gen</title>
+    <link rel="stylesheet" href="css/min/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <section id="generator">
+        <div class="form">
+            <div class="form-container">
+                <h1>Pass Gen</h1>
+                <form id="form">
+                    <input type="range" name="slider" min="1" max="32" value="16" id="slider"><br>
+                    <p>Length: <span id="length">0</span></p><br>
+                    <p id="checkbox-error">Please select first</p>
+                    <input type="checkbox" name="digits" id="digits" class="checkbox"><label for="digits">Digits (0-9)</label><br>
+                    <input type="checkbox" name="alphabets" id="alphabets" class="checkbox"><label for="alphabets">Alphabets (A-Z, a-z)</label><br>
+                    <input type="checkbox" name="specialchars" id="specialchars" class="checkbox"><label for="specialchars">Special Characters (!@#$%^&*)</label><br>
+                    <button onclick="generateButton();" id="submit" type="button">Generate</button>
+                </form>
+                <div class="password-container" id="pw-box">
+                    <p id="title">Password</p>
+                    <p id="password"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/slider.js"></script>
+    <script src="js/clipboard.js"></script>
+</body>
+</html>
